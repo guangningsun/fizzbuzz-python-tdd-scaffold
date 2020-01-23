@@ -2,11 +2,12 @@
 import sys
 import getopt
 
+
 def main():
     try:
         opts, args = getopt.getopt(sys.argv[1:], "h", ["help"])
         print_fizzbuzz(int(args[0]))
-    except:
+    except EOFError:
         sys.exit(0)
 
 
@@ -25,9 +26,7 @@ def fizzbuzz(input_num):
         return ("fizz buzz")
     else:
         return "pass"
-    
 
 
 if __name__ == "__main__":
     main()
-
